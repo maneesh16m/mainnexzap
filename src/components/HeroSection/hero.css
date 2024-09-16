@@ -1,0 +1,15 @@
+.video-crop-container {
+    width: 100%;  /* Responsive width */
+    aspect-ratio: 16/9; /* Cropping to 16:9 aspect ratio */
+    overflow: hidden;
+    position: relative;
+  }
+  
+
+  .cropped-video {
+    width: 100%;  /* Full width inside container */
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

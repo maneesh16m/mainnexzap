@@ -1,32 +1,22 @@
 import React from 'react'
-import HeroBgAnimation from '../HeroBgAnimation'
-import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Span } from './HeroStyle'
-import HeroImg from '../../images/logolap3.png'
-import TypeWriterDesc from './TypeWriter';
-
+import { HeroContainer } from './HeroStyle'
+import HomepageVideo from '../../images/HomepageVideo.mp4'
+import './hero.css';
 const HeroSection = () => {
     return (
         <div id="home">
             <HeroContainer>
-                <HeroBg>
-                    <HeroBgAnimation />
-                </HeroBg>
-                <HeroInnerContainer >
-                    <HeroLeftContainer id="Left">
-                        <TextLoop>
-                            <Span>
-                                <TypeWriterDesc/>
-                            </Span>
-                        </TextLoop>
-                    </HeroLeftContainer>
-
-                    <HeroRightContainer id="Right">
-
-                        <Img src={HeroImg} alt="hero-image"
-                        className="transition-transform duration-1000 ease-in-out transform hover:scale-110" />
-                    </HeroRightContainer>
-                </HeroInnerContainer>
-
+                <div className="relative w-screen h-screen overflow-hidden">
+                <video
+                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
+                    autoPlay
+                    muted
+                    playsInline
+                >
+                    <source src={HomepageVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                </div>
             </HeroContainer>
         </div>
     )
