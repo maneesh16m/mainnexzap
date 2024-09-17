@@ -12,7 +12,9 @@ const Projects = ({openModal,setOpenModal}) => {
       <Wrapper>
         <Title>Services</Title>
         <Desc className='mb-3'>
-          I have worked on a wide range of projects. Here are some of my projects.
+        We are a team of engineers who love building tools for other
+          engineers. Our goal is to create the email platform we've always
+          wished we had — one that just works.
         </Desc>
         <CardContainer>
           {toggle === 'all' && projects
