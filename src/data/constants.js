@@ -1,23 +1,23 @@
-    export const Products = [
-    {
-      title: "Product 1",
-      description: "Sell, redeem, and recharge gift cards both online and through POS terminals.Sell, redeem, and recharge gift cards both online and through POS terminals.",
-    
-    },
-    {
-      title: "Product 2",
-      description:"Sell, redeem, and recharge gift cards both online and through POS terminals.Sell, redeem, and recharge gift cards both online and through POS terminals.",
-    },
-    
-    {
-      title: "Product 3",
-      description: "Sell, redeem, and recharge gift cards both online and through POS terminals.Sell, redeem, and recharge gift cards both online and through POS terminals.",
-    },
-    {
-      title: "Product 4",
-      description: "Sell, redeem, and recharge gift cards both online and through POS terminals.Sell, redeem, and recharge gift cards both online and through POS terminals.",
-    },
-  ];
+export const Products = [
+  {
+    title: "VOUCHA SaaS",
+    description: "A custom-built gift card management system with dedicated admin & customer portal. Easily create, distribute, and track both physical and digital gift cards to engage customers and drive sales",
+  
+  },
+  {
+    title: "RAGBOT SaaS",
+    description:"A cutting-edge, LLM-based Retrieval-Augmented Generation (RAG) model designed to help companies organize and retrieve information efficiently. With RAGBOT, businesses can leverage AI for intelligent document search and processing.",
+  },
+  
+  {
+    title: "Web Applications",
+    description: "We specialize in creating tailored software applications that meet your business's unique needs. From automation to full-scale platforms, we deliver innovative solutions that scale with your growth.",
+  },
+  {
+    title: "SaaS Products",
+    description: "Sell, redeem, and recharge gift cards both online and through POS terminals.Sell, redeem, and recharge gift cards both online and through POS terminals.",
+  },
+];
   
   
   export const projects = [
