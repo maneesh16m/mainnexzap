@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mainnexzap/static/css/main.0439163b.css",
-    "main.js": "/mainnexzap/static/js/main.f34d5afc.js",
-    "static/media/HomepageVideo.mp4": "/mainnexzap/static/media/HomepageVideo.981f257fe38c2e9795f4.mp4",
-    "static/media/nexlogo.png": "/mainnexzap/static/media/nexlogo.7ce657688aef5c2f2d87.png",
-    "index.html": "/mainnexzap/index.html",
-    "main.0439163b.css.map": "/mainnexzap/static/css/main.0439163b.css.map",
-    "main.f34d5afc.js.map": "/mainnexzap/static/js/main.f34d5afc.js.map"
+    "main.css": "/static/css/main.0e490a94.css",
+    "main.js": "/static/js/main.9f51b35b.js",
+    "static/media/HomepageVideo.mp4": "/static/media/HomepageVideo.981f257fe38c2e9795f4.mp4",
+    "static/media/nexlogo.png": "/static/media/nexlogo.7ce657688aef5c2f2d87.png",
+    "index.html": "/index.html",
+    "main.0e490a94.css.map": "/static/css/main.0e490a94.css.map",
+    "main.9f51b35b.js.map": "/static/js/main.9f51b35b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0439163b.css",
-    "static/js/main.f34d5afc.js"
+    "static/css/main.0e490a94.css",
+    "static/js/main.9f51b35b.js"
   ]
 }
