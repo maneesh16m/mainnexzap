@@ -25,7 +25,7 @@ const Navbar = () => {
           <NavLink href='#products'>Products</NavLink>
           <NavLink href='#services'>Services</NavLink>
           <NavLink href='#contact'>Contact</NavLink>
-          <NavLink href="https://www.linkedin.com/company/nexzap/about/?viewAsMember=true" target="_blank"><LinkedInIcon/></NavLink>
+          <NavLink href="https://www.linkedin.com/company/104412613/admin/dashboard/" target="_blank"><LinkedInIcon/></NavLink>
         </NavItems>
         {/* <ButtonContainer>
           

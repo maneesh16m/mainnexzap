@@ -152,7 +152,9 @@ const Skills = () => {
             <Product>
               <ProductTitle>{id.title}</ProductTitle>
               <ProductItem>{id.description}</ProductItem>
-              <ProductButton href="https://nexzap.com/" className='mx-auto'>{id.title}</ProductButton>
+              <a href={id.href} rel="noreferrer" target="_blank" className="mx-auto flex justify-center items-center">
+                <ProductButton>{id.title}</ProductButton>
+              </a>
             </Product>
           ))}
 
