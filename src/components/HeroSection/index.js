@@ -6,17 +6,21 @@ const HeroSection = () => {
     return (
         <div id="home">
             <HeroContainer>
-                <div className="relative w-screen h-screen overflow-hidden">
-                <video
-                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
-                    autoPlay
-                    muted
-                    playsInline
-                >
-                    <source src={HomepageVideo} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                </div>
+            <div className="relative w-screen  h-[400px] lg:h-screen overflow-hidden">
+            <video
+                className="absolute top-0 left-0 w-full h-full object-contain lg:object-cover"
+                autoPlay
+                muted
+                playsInline
+            >
+                <source src={HomepageVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            </div>
+
+
+
+
             </HeroContainer>
         </div>
     )

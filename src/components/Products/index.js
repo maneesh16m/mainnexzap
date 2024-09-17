@@ -19,7 +19,7 @@ justify-content: space-between;
 align-items: center;
 flex-direction: column;
 width: 100%;
-max-width: 1100px;
+max-width: 1200px;
 gap: 12px;
 @media (max-width: 960px) {
     flex-direction: column;
@@ -55,6 +55,7 @@ const ProductContainer = styled.div`
   margin-top: 30px;
   gap: 30px;
   justify-content: center;
+  position: relative;
   transition: all 0.5s ease-in-out;
   
 `
@@ -67,6 +68,7 @@ const Product = styled.div`
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
+  position: relative;
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
@@ -91,11 +93,11 @@ const ProductItem = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 80};
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: 12px 5px 20px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom:5px;
+  margin-bottom:50px;
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 12px;
@@ -120,6 +122,8 @@ const ProductButton = styled.button`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  position: absolute; /* Absolute positioning */
+  bottom: 20px; /* Set gap from the bottom */
 
   &:hover {
     background-color: ${({ theme }) => theme.primary_hover}; /* Set button hover background color */
