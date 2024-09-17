@@ -24,19 +24,7 @@ export const Products = [
   export const projects = [
 
     {
-      id: 3,
-      title: "Quiz Web App",
-      date: "Mar 2024",
-      description:
-        "An interactive quiz application built using React. Users can choose the number of questions they want to answer and start the quiz. It fetches questions from the Open Trivia Database API and presents them to the user. Users can select their answers and receive instant feedback. After completing the quiz, users can view their score and a summary of their answers.",
-      image:null,
-      tags: ["React JS", "JavaScript", "HTML", "CSS"],
-      category: "web app",
-      github: "https://github.com/vignesh3022/React-project-Quizapp",
-      webapp: "https://our-quizapp.vercel.app/",
-    },
-    {
-      id: 4,
+      id: 1,
       title: "Smart Blind Stick",
       date: "Sept 2020 - Oct 2022",
       description:

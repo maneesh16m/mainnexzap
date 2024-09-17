@@ -100,11 +100,11 @@ const ProductItem = styled.div`
   margin-bottom:50px;
   @media (max-width: 768px) {
     font-size: 14px;
-    padding: 8px 12px;
+    padding: 12px 5px 20px 5px;
   }
   @media (max-width: 500px) {
     font-size: 14px;
-    padding: 6px 12px;
+    padding: 12px 5px 20px 5px;
   }
 }
   
