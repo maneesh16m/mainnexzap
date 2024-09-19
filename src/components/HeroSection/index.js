@@ -19,7 +19,7 @@ const HeroSection = () => {
                 {/* Video for small and medium screens */}
                 <div className="sm:block md:block lg:hidden">
                     <video
-                        className="absolute top-0 left-0 w-full h-full object-cover"
+                        className="absolute top-0 left-0 w-full h-[90%] object-cover"
                         autoPlay
                         muted
                         playsInline
