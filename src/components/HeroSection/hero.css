@@ -1,15 +1,23 @@
-.video-crop-container {
-    width: 100%;  /* Responsive width */
-    aspect-ratio: 16/9; /* Cropping to 16:9 aspect ratio */
-    overflow: hidden;
-    position: relative;
-  }
-  
 
-  .cropped-video {
-    width: 100%;  /* Full width inside container */
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.homepagebtn {
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 9px;
+  background: #d5f365;
+  border: none;
+  font-family: inherit;
+  text-align:center;
+  cursor: pointer;
+  transition: 0.4s;
+ }
+ 
+ .homepagebtn:hover {
+  box-shadow: 7px 5px 56px -14px #C3D900;
+ }
+ 
+ .homepagebtn:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #C3D900;
+ }

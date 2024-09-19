@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Computer from '../../videos/Computer.mp4'
 import Mobile from '../../videos/Mobile.mp4'
-
+import './hero.css';
 const HeroSection = () => {
     const [showButton, setShowButton] = useState(false);
 
@@ -46,15 +46,16 @@ const HeroSection = () => {
 
                 {/* Button displayed after the video ends */}
                 {showButton && (
-                    <div className="absolute inset-0 flex justify-center items-center">
-                        <button
-                            onClick={handleButtonClick}
-                            className="bg-[#3a165a] text-white px-4 py-4 rounded-md text-lg"
-                        >
-                            Begin Our Journey
-                        </button>
-                    </div>
+                <div className="absolute top-[150px] left-0 right-0 flex justify-center items-start mt-4">
+                    <button
+                    onClick={handleButtonClick}
+                    className="homepagebtn bg-purple-600 text-black font-semibold rounded-lg"
+                    >
+                    Get Started
+                    </button>
+                </div>
                 )}
+
             </div>
         </div>
     );
