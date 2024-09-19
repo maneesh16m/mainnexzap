@@ -168,7 +168,7 @@ const Contact = () => {
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
-          Feel free to reach out to me for any questions or opportunities!
+          Feel free to reach out to us for any questions or opportunities!
         </Desc>
         <ContactForm  onSubmit={handleSubmit}>
           <ContactTitle>Email Us</ContactTitle>

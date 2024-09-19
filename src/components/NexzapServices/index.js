@@ -1,12 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
 import { Container, Wrapper, Title, Desc, CardContainer } from './ServiceStyle'
-import ProjectCard from '../Cards/ProjectCards'
-import { projects } from '../../data/constants'
+import ServiceCard from '../Cards/ServiceCards'
+import { Services } from '../../data/constants'
 
 
 const Projects = ({openModal,setOpenModal}) => {
-  const [toggle, setToggle] = useState('all');
   return (
     <Container id="services">
       <Wrapper>
@@ -17,15 +15,11 @@ const Projects = ({openModal,setOpenModal}) => {
           wished we had — one that just works.
         </Desc>
         <CardContainer>
-          {toggle === 'all' && projects
+          {Services
             .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
+              <ServiceCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
             ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-            ))}
+
         </CardContainer>
       </Wrapper>
     </Container>

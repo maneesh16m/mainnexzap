@@ -1,6 +1,5 @@
 import React from 'react'
 import { Nav, NavLink, NavbarContainer, NavLogo, NavItems,  MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
-
 import { FaBars, FaTimes } from 'react-icons/fa';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import nexlogo from '../../images/nexlogo.png';
