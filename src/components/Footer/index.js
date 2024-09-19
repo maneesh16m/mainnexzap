@@ -1,9 +1,4 @@
 import styled from 'styled-components';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { Bio } from '../../data/constants';
-import { GitHub } from '@mui/icons-material';
-
 const FooterContainer = styled.div`
   width: 100%;
   padding: 2rem 0;

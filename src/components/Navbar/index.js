@@ -2,13 +2,11 @@ import React from 'react'
 import { Nav, NavLink, NavbarContainer, NavLogo, NavItems,  MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
 
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { useTheme } from 'styled-components';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import nexlogo from '../../images/nexlogo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
   return (
     <Nav>
       <NavbarContainer>
