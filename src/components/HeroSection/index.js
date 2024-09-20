@@ -2,13 +2,15 @@ import { useState, useRef } from "react";
 import Computer from '../../videos/Computer.mp4'
 import Mobile from '../../videos/Mobile.mp4'
 import './hero.css';
+
 const HeroSection = () => {
     const [showButton, setShowButton] = useState(false);
-    const videoRef = useRef(null); // Ref to access the video element
+    const mobileVideoRef = useRef(null); // Ref for mobile video
+    const desktopVideoRef = useRef(null); // Ref for desktop video
 
-    // Function to show the button 2 seconds before the video ends
-    const handleTimeUpdate = () => {
-      const video = videoRef.current;
+    // Function to show the button 2 seconds before the mobile video ends
+    const handleMobileTimeUpdate = () => {
+      const video = mobileVideoRef.current;
       if (video) {
         const timeRemaining = video.duration - video.currentTime;
         if (timeRemaining <= 2) { // Show the button 2 seconds before the end
@@ -16,6 +18,18 @@ const HeroSection = () => {
         }
       }
     };
+
+    // Function to show the button 2 seconds before the desktop video ends
+    const handleDesktopTimeUpdate = () => {
+      const video = desktopVideoRef.current;
+      if (video) {
+        const timeRemaining = video.duration - video.currentTime;
+        if (timeRemaining <= 2) { // Show the button 2 seconds before the end
+          setShowButton(true);
+        }
+      }
+    };
+
     const handleButtonClick = () => {
         window.location.href = "#products"; // Navigate to the products page
     };
@@ -29,10 +43,10 @@ const HeroSection = () => {
                         className="absolute top-0 left-0 w-full h-[90%] object-cover"
                         autoPlay
                         muted
-                        ref={videoRef}
+                        ref={mobileVideoRef} // Use mobile video ref
                         playsInline
-                        onTimeUpdate={handleTimeUpdate} // Trigger this event during video playback
-                        onEnded={() => setShowButton(true)} // Fallback if video reaches the end
+                        onTimeUpdate={handleMobileTimeUpdate} // Trigger this event during mobile video playback
+                        onEnded={() => setShowButton(true)} // Fallback if mobile video reaches the end
                     >
                         <source src={Mobile} type="video/mp4" />
                         Your browser does not support the video tag.
@@ -45,12 +59,12 @@ const HeroSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                         autoPlay
                         muted
-                        ref={videoRef}
+                        ref={desktopVideoRef} // Use desktop video ref
                         playsInline
-                        onTimeUpdate={handleTimeUpdate} // Trigger this event during video playback
-                        onEnded={() => setShowButton(true)} // Fallback if video reaches the end
+                        onTimeUpdate={handleDesktopTimeUpdate} // Trigger this event during desktop video playback
+                        onEnded={() => setShowButton(true)} // Fallback if desktop video reaches the end
                     >
-                        <source src={Computer}  type="video/mp4" />
+                        <source src={Computer} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>

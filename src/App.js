@@ -5,8 +5,8 @@ import Navbar from "./components/Navbar";
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import HeroSection from "./components/HeroSection";
-import Products  from "./components/Products/index.js";
-import Projects from "./components/NexapServices/index.js";
+import Products  from "./components/NexzapProducts/index.js";
+import NexzapServices from "./components/NexzapServices/index.js";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import styled from "styled-components";
@@ -33,7 +33,7 @@ function App() {
           <Wrapper>
             <Products  />
           </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          <NexzapServices openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
             <Contact />
           </Wrapper>

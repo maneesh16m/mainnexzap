@@ -4,7 +4,7 @@ import ServiceCard from '../Cards/ServiceCards'
 import { Services } from '../../data/constants'
 
 
-const Projects = ({openModal,setOpenModal}) => {
+const NexzapServices = ({openModal,setOpenModal}) => {
   return (
     <Container id="services">
       <Wrapper>
@@ -26,4 +26,4 @@ const Projects = ({openModal,setOpenModal}) => {
   )
 }
 
-export default Projects
+export default NexzapServices
