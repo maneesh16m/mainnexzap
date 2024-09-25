@@ -17,15 +17,16 @@ const Button = styled.button`
 `
 const Card = styled.div`
     width: 350px;
-    height: 400px;
+    height: 350px;
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
+    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
     overflow: hidden;
-    padding: 26px 20px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
+    margin: 20px;
     gap: 14px;
     transition: all 0.5s ease-in-out;
     &:hover {
@@ -36,25 +37,6 @@ const Card = styled.div`
     &:hover ${Button} {
         display: block;
     }
-`
-
-
-const Tags = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 4px;
-`
-
-const Tag = styled.span`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.primary};
-    background-color: ${({ theme }) => theme.primary + 15};
-    padding: 2px 8px;
-    border-radius: 10px;
 `
 
 const Details = styled.div`
@@ -84,6 +66,7 @@ const Description = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.text_secondary + 99};
     margin-top: 8px;
+    padding: 0px 10px 0px 10px;
     display: -webkit-box;
     max-width: 100%;
     -webkit-line-clamp: 3;
@@ -96,11 +79,6 @@ const ProjectCards = ({project,setOpenModal}) => {
     return (
         <Card onClick={() => setOpenModal({state: true, project: project})}>
             <Title>{project.title}</Title>
-            <Tags>
-                {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
-                ))}
-            </Tags>
             <Details>
                 <Description>{project.description}</Description>
             </Details>

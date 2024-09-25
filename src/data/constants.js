@@ -18,13 +18,11 @@ export const ProductsData  = [
       id:1,
       title: "SaaS Products",
       description: "We build customised SaaS products for your business.",
-      tags: ["Arduino UNO", "Ultrasonic Sensor","Buzzer", "Code in C++"],
     },
     {
       id:2,
       title: "Web Applications",
       description: "We specialize in creating tailored software applications that meet your business's unique needs. From automation to full-scale platforms, we deliver innovative solutions that scale with your growth.",
-      tags: ["Arduino UNO", "Ultrasonic Sensor","Buzzer", "Code in C++"],
     },
     
   ];
