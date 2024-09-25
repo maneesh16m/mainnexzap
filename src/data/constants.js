@@ -1,22 +1,22 @@
 export const Products = [
   {
-    title: "VOUCHA SaaS",
+    title: "WALLET",
     description: "A custom-built gift card management system with dedicated admin & customer portal. Easily create, distribute, and track both physical and digital gift cards to engage customers and drive sales",
-    href: "http://lucas.voucha.nexzap.com"
+    href: "http://voucha.nexzap.com"
   },
   {
-    title: "RAGBOT SaaS",
+    title: "PRIVATEBOT",
     description:"A cutting-edge, LLM-based Retrieval-Augmented Generation (RAG) model designed to help companies organize and retrieve information efficiently. With RAGBOT, businesses can leverage AI for intelligent document search and processing.",
-    href: "http://lucas.chatbot.nexzap.com"
+    href: "http://chatbot.nexzap.com"
   },
   
   {
-    title: "Web Applications",
+    title: "WEB APPLICATIONS",
     description: "We specialize in creating tailored software applications that meet your business's unique needs. From automation to full-scale platforms, we deliver innovative solutions that scale with your growth.",
   },
   {
-    title: "SaaS Products",
-    description: "Sell, redeem, and recharge gift cards both online and through POS terminals.Sell, redeem, and recharge gift cards both online and through POS terminals.",
+    title: "SaaS PRODUCTS",
+    description: "We build SaaS products fro your business.",
   },
 ];
   
