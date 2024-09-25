@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Products } from '../../data/constants'
+import { ProductsData } from '../../data/constants'
 
 const Container = styled.div`
 display: flex;
@@ -144,7 +144,7 @@ const ProductButton = styled.button`
 
 
 
-const Skills = () => {
+const Products = () => {
   return (
     <Container id="products">
       <Wrapper>
@@ -152,7 +152,7 @@ const Skills = () => {
         <Desc> A simple, elegant interface so you can start sending emails in minutes. It fits right into your code with SDKs for your favorite programming languages.
         </Desc>
         <ProductContainer>
-          {Products.map((id) => (
+          {ProductsData.map((id) => (
             <Product>
               <ProductTitle>{id.title}</ProductTitle>
               <ProductItem>{id.description}</ProductItem>
@@ -168,4 +168,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Products 

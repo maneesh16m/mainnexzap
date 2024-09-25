@@ -1,15 +1,14 @@
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { darkTheme, lightTheme } from './utils/Themes.js'
+import { darkTheme } from './utils/Themes.js'
 import Navbar from "./components/Navbar";
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 import HeroSection from "./components/HeroSection";
-import Skills from "./components/Products/index.js";
-import Projects from "./components/NexapServices/index.js";
+import Products  from "./components/NexzapProducts/index.js";
+import NexzapServices from "./components/NexzapServices/index.js";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 
 const Body = styled.div`
@@ -23,26 +22,22 @@ const Wrapper = styled.div`
   width: 100%;
 `
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   console.log(openModal)
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkTheme }>
       <Router >
         <Navbar />
         <Body>
           <HeroSection />
           <Wrapper>
-            <Skills />
+            <Products  />
           </Wrapper>
-          <Projects openModal={openModal} setOpenModal={setOpenModal} />
+          <NexzapServices openModal={openModal} setOpenModal={setOpenModal} />
           <Wrapper>
             <Contact />
           </Wrapper>
           <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
         </Body>
       </Router>
     </ThemeProvider>

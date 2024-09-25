@@ -1,15 +1,41 @@
-.video-crop-container {
-    width: 100%;  /* Responsive width */
-    aspect-ratio: 16/9; /* Cropping to 16:9 aspect ratio */
-    overflow: hidden;
-    position: relative;
-  }
-  
 
-  .cropped-video {
-    width: 100%;  /* Full width inside container */
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.homepagebtn {
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 9px;
+  background: hsla(271, 100%, 50%, 1);
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(271, 100%, 50%, 1) 0%,
+    hsla(294, 100%, 50%, 1) 100%
+  );
+  border: none;
+  font-family: inherit;
+  text-align:center;
+  cursor: pointer;
+  transition: 0.4s;
+ }
+ 
+ .homepagebtn:hover {
+  background: linear-gradient(225deg, hsla(284, 100%, 60%, 1) 0%, hsla(307, 100%, 60%, 1) 100%);
+  box-shadow: 7px 5px 56px -14px #E08AFF; /* Slightly lighter and brighter purple-pink */
+}
+
+.homepagebtn:active {
+  background: linear-gradient(225deg, hsla(271, 100%, 45%, 1) 0%, hsla(294, 100%, 45%, 1) 100%);
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -10px #D76AFF; /* Darker purple-pink for active state */
+}
+

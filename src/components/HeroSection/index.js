@@ -1,12 +1,33 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Computer from '../../videos/Computer.mp4'
 import Mobile from '../../videos/Mobile.mp4'
+import './hero.css';
 
 const HeroSection = () => {
     const [showButton, setShowButton] = useState(false);
+    const mobileVideoRef = useRef(null); // Ref for mobile video
+    const desktopVideoRef = useRef(null); // Ref for desktop video
 
-    const handleVideoEnd = () => {
-        setShowButton(true); // Display the button when the video ends
+    // Function to show the button 2 seconds before the mobile video ends
+    const handleMobileTimeUpdate = () => {
+      const video = mobileVideoRef.current;
+      if (video) {
+        const timeRemaining = video.duration - video.currentTime;
+        if (timeRemaining <= 2) { // Show the button 2 seconds before the end
+          setShowButton(true);
+        }
+      }
+    };
+
+    // Function to show the button 2 seconds before the desktop video ends
+    const handleDesktopTimeUpdate = () => {
+      const video = desktopVideoRef.current;
+      if (video) {
+        const timeRemaining = video.duration - video.currentTime;
+        if (timeRemaining <= 2) { // Show the button 2 seconds before the end
+          setShowButton(true);
+        }
+      }
     };
 
     const handleButtonClick = () => {
@@ -22,8 +43,10 @@ const HeroSection = () => {
                         className="absolute top-0 left-0 w-full h-[90%] object-cover"
                         autoPlay
                         muted
+                        ref={mobileVideoRef} // Use mobile video ref
                         playsInline
-                        onEnded={handleVideoEnd}
+                        onTimeUpdate={handleMobileTimeUpdate} // Trigger this event during mobile video playback
+                        onEnded={() => setShowButton(true)} // Fallback if mobile video reaches the end
                     >
                         <source src={Mobile} type="video/mp4" />
                         Your browser does not support the video tag.
@@ -36,61 +59,31 @@ const HeroSection = () => {
                         className="absolute top-0 left-0 w-full h-full object-cover"
                         autoPlay
                         muted
+                        ref={desktopVideoRef} // Use desktop video ref
                         playsInline
-                        onEnded={handleVideoEnd}
+                        onTimeUpdate={handleDesktopTimeUpdate} // Trigger this event during desktop video playback
+                        onEnded={() => setShowButton(true)} // Fallback if desktop video reaches the end
                     >
-                        <source src={Computer}  type="video/mp4" />
+                        <source src={Computer} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
 
                 {/* Button displayed after the video ends */}
                 {showButton && (
-                    <div className="absolute inset-0 flex justify-center items-center">
-                        <button
-                            onClick={handleButtonClick}
-                            className="bg-[#3a165a] text-white px-4 py-4 rounded-md text-lg"
-                        >
-                            Begin Our Journey
-                        </button>
-                    </div>
+                <div className="absolute top-[150px] left-0 right-0 flex justify-center items-start mt-4">
+                    <button
+                    onClick={handleButtonClick}
+                    className="homepagebtn bg-purple-600 text-black font-semibold rounded-lg"
+                    >
+                    Get Started
+                    </button>
+                </div>
                 )}
+
             </div>
         </div>
     );
 };
 
 export default HeroSection;
-
-
-
-
-// import React from 'react'
-// import { HeroContainer } from './HeroStyle'
-// import HomepageVideo from '../../images/HomepageVideo.mp4'
-// import './hero.css';
-// const HeroSection = () => {
-//     return (
-//         <div id="home">
-//             <HeroContainer>
-//             <div className="relative w-screen  h-[400px] lg:h-screen overflow-hidden">
-//             <video
-//                 className="absolute top-0 left-0 w-full h-full object-contain lg:object-cover"
-//                 autoPlay
-//                 muted
-//                 playsInline
-//             >
-//                 <source src={HomepageVideo} type="video/mp4" />
-//                 Your browser does not support the video tag.
-//             </video>
-//             </div>
-
-
-
-
-//             </HeroContainer>
-//         </div>
-//     )
-// }
-
-// export default HeroSection
