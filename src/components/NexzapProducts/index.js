@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ProductsData } from '../../data/constants'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
 display: flex;
@@ -109,9 +110,10 @@ const ProductItem = styled.div`
 }
   
 `
-const ProductButton = styled.button`
-  background-color: ${({ theme }) => theme.primary}; /* Set button background color */
-  color: ${({ theme }) => theme.button_text}; /* Set button text color */
+
+const ProductButton = styled(Link)`
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.button_text};
   font-size: 16px;
   font-weight: 600;
   border: none;
@@ -122,12 +124,15 @@ const ProductButton = styled.button`
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  position: absolute; /* Absolute positioning */
-  bottom: 20px; /* Set gap from the bottom */
+  position: absolute;
+  bottom: 20px;
+  left: 50%; // Add this line
+  transform: translateX(-50%); // Add this line
+  text-decoration: none;
 
   &:hover {
-    background-color: ${({ theme }) => theme.primary_hover}; /* Set button hover background color */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    background-color: ${({ theme }) => theme.primary_hover};
+    transform: translateX(-50%) scale(1.05); // Modify this line
   }
 
   @media (max-width: 768px) {
@@ -141,31 +146,27 @@ const ProductButton = styled.button`
   }
 `;
 
-
-
-
 const Products = () => {
   return (
     <Container id="products">
       <Wrapper>
         <Title>Products</Title>
-        <Desc> A simple, elegant interface so you can start sending emails in minutes. It fits right into your code with SDKs for your favorite programming languages.
+        <Desc> Our suite of products is designed to drive efficiency, improve workflow, and deliver a seamless user experience.
         </Desc>
         <ProductContainer>
-          {ProductsData.map((id) => (
-            <Product>
-              <ProductTitle>{id.title}</ProductTitle>
-              <ProductItem>{id.description}</ProductItem>
-              <a href={id.href} rel="noreferrer" target="_blank" className="mx-auto flex justify-center items-center">
-                <ProductButton>{id.title}</ProductButton>
-              </a>
+          {ProductsData.map((product, index) => (
+            <Product key={index}>
+              <ProductTitle>{product.title}</ProductTitle>
+              <ProductItem>{product.description}</ProductItem>
+              <ProductButton to={product.href}>
+                {product.title}
+              </ProductButton>
             </Product>
           ))}
-
         </ProductContainer>
       </Wrapper>
     </Container>
   )
 }
 
-export default Products 
+export default Products

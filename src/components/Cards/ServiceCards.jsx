@@ -21,7 +21,7 @@ const Card = styled.div`
     background-color: ${({ theme }) => theme.card};
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 12px 4px rgba(133, 76, 230, 0.4);
     overflow: hidden;
     padding: 26px;
     display: flex;
@@ -31,7 +31,7 @@ const Card = styled.div`
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
+        box-shadow: 0 0 50px 4px rgba(133, 76, 230, 0.6);
         filter: brightness(1.1);
     }
     &:hover ${Button} {
@@ -65,25 +65,26 @@ const Title = styled.div`
 const Description = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.text_secondary + 99};
+    overflow: hidden;
     margin-top: 8px;
-    padding: 0px 10px 0px 10px;
     display: -webkit-box;
     max-width: 100%;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    text-align: center;
 `
 
 
-const ProjectCards = ({project,setOpenModal}) => {
+const ServiceCard = ({ project, setOpenModal }) => {
     return (
-        <Card onClick={() => setOpenModal({state: true, project: project})}>
-            <Title>{project.title}</Title>
+        <Card>
             <Details>
+                <Title>{project.title}</Title>
                 <Description>{project.description}</Description>
             </Details>
         </Card>
     )
 }
 
-export default ProjectCards
+export default ServiceCard

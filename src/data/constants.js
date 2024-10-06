@@ -2,12 +2,17 @@ export const ProductsData  = [
   {
     title: "WALLET",
     description: "A custom-built gift card management system with dedicated admin & customer portal. Easily create, distribute, and track both physical and digital gift cards to engage customers and drive sales",
-    href: "http://wallet.nexzap.com"
+    href: "/wallet"
   },
   {
     title: "PRIVATEBOT",
-    description:"A cutting-edge, LLM-based Retrieval-Augmented Generation (RAG) model designed to help companies organize and retrieve information efficiently. With RAGBOT, businesses can leverage AI for intelligent document search and processing.",
-    href: "http://chatbot.nexzap.com"
+    description:"A cutting-edge, LLM-based model designed to help companies organize and retrieve information efficiently. With PRIVATEBOT, businesses can leverage AI for intelligent document search and processing.",
+    href: "/privatebot"
+  },
+  {
+    title: "TAGFLO",
+    description:"TAGFLO, is a comprehensive tracking tool for businesses that need to manage and monitor their valuable assets. TAGFLO, ensures accountability through item verification, PIN-based access, and photo capture.",
+    href: "/tagflo"
   },
 ];
   

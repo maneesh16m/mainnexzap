@@ -10,9 +10,7 @@ const NexzapServices = ({openModal,setOpenModal}) => {
       <Wrapper>
         <Title>Services</Title>
         <Desc className='mb-3'>
-        We are a team of engineers who love building tools for other
-          engineers. Our goal is to create the email platform we've always
-          wished we had — one that just works.
+        At NEXZAP, our commitment is to innovation, offering businesses the tools they need to stay ahead of the curve in an ever-evolving digital landscape.
         </Desc>
         <CardContainer>
           {Services
