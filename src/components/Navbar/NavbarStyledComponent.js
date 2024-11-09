@@ -2,13 +2,14 @@ import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.div`
-    background-color: ${({theme}) => theme.card_light};
-    height: 80px;
+    background: linear-gradient(50deg, #1a1733, #0a0b0d);
+    height: 67px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     z-index: 10;
     @media (max-width: 960px) {
