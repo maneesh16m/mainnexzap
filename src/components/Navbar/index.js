@@ -2,7 +2,8 @@ import React from 'react'
 import { Nav, NavLink, NavbarContainer, NavLogo, NavItems, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
 import { FaBars } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
-import nexlogo from '../../images/nexlogo.png'; // Import the logo
+ // Import the logo
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -32,7 +33,7 @@ const Navbar = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to='/'>
-          <img src={nexlogo} alt="logo" style={{ width: '50px', height: 'auto' }} />
+          <img src="/images/nexlogo.png" alt="logo" style={{ width: '50px', height: 'auto' }} />
         </NavLogo>
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <FaBars />
