@@ -151,8 +151,6 @@ const Products = () => {
     <Container id="products">
       <Wrapper>
         <Title>Products</Title>
-        <Desc> Our suite of products is designed to drive efficiency, improve workflow, and deliver a seamless user experience.
-        </Desc>
         <ProductContainer>
           {ProductsData.map((product, index) => (
             <Product key={index}>

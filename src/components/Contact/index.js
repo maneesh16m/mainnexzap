@@ -1,9 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
 
-import emailjs from "@emailjs/browser";
-
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -62,7 +59,7 @@ const ContactForm = styled.form`
   background-color: ${({ theme }) => theme.card};
   padding: 32px;
   border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  cursor: pointer;
   margin-top: 28px;
   gap: 12px;
 `;
@@ -71,22 +68,10 @@ const ContactTitle = styled.div`
   font-size: 24px;
   margin-bottom: 6px;
   font-weight: 600;
+  text-align: center;
   color: ${({ theme }) => theme.text_primary};
 `;
 
-const ContactInput = styled.input`
-  flex: 1;
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary};
-  outline: none;
-  font-size: 18px;
-  color: ${({ theme }) => theme.text_primary};
-  border-radius: 12px;
-  padding: 12px 16px;
-  &:focus {
-    border: 1px solid ${({ theme }) => theme.primary};
-  }
-`;
 
 const ContactInputMessage = styled.textarea`
   flex: 1;
@@ -132,35 +117,12 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
-  //hooks
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const serviceId = "service_id";
-    const templateId = "template_id";
-    const publicKey = "publickey";
-
-    const formData = {
-      to_name: "toname",
-      from_name: name,
-      from_email: email,
-      message: message,
-
-    };
-    emailjs
-      .send(serviceId, templateId, formData, publicKey)
-      .then((response) => {
-        console.log("Email sent successfully",response);
-        setName('');
-        setEmail('');
-        setMessage('');
-      })
-      .catch((error) => {
-        console.log("Error sending email :",error);
-      });
+    const mailtoUrl = `mailto:info@nexzap.com?subject=Contact Message&body=${message}`;
+    window.location.href = mailtoUrl;
   };
 
   return (
@@ -168,16 +130,18 @@ const Contact = () => {
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
-          Feel free to reach out to us for any questions or opportunities!
+          Feel free to reach out for any enquiries!
         </Desc>
-        <ContactForm  onSubmit={handleSubmit}>
+        <ContactForm onSubmit={handleSubmit}>
           <ContactTitle>Email Us</ContactTitle>
-          <ContactInput placeholder="Your Email" type="text" value={email} onChange={(e)=>setEmail(e.target.value)} />
-          <ContactInput placeholder="Your Name" type="text" value={name} onChange={(e)=>setName(e.target.value)} />
-          <ContactInputMessage placeholder="Message" rows="6" type="text" value={message} onChange={(e)=>setMessage(e.target.value)} />
+          <ContactInputMessage 
+            placeholder="Message" 
+            rows="6" 
+            value={message} 
+            onChange={(e)=>setMessage(e.target.value)} 
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
-        
       </Wrapper>
     </Container>
   );
