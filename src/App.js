@@ -20,10 +20,21 @@ const Body = styled.div`
   overflow-x: hidden;
 `
 
+// const Wrapper1 = styled.div`
+//   background: linear-gradient(38.73deg, rgba(201, 32, 184, 0) 50%);
+//   width: 100%;
+// `
+
 const Wrapper = styled.div`
-  background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
+  background-color: #211e30;
   width: 100%;
-`
+`;
+
+const Wrapper2 = styled.div`
+  background-color: ${({ theme }) => theme.card};
+  width: 100%;
+`;
+
 
 function App() {
   const [openModal, setOpenModal] = useState({ state: false, project: null });
@@ -40,7 +51,9 @@ function App() {
                 <Wrapper>
                   <Products />
                 </Wrapper>
-                <NexzapServices openModal={openModal} setOpenModal={setOpenModal} />
+                <Wrapper2>
+                  <NexzapServices openModal={openModal} setOpenModal={setOpenModal} />
+                </Wrapper2>
                 <Wrapper>
                   <Contact />
                 </Wrapper>
